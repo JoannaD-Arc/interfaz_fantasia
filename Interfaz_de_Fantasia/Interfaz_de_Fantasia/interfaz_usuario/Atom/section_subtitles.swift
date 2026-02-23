@@ -11,19 +11,25 @@ struct SectionSubtitles: View {
     
     var subtitulos_seccion: [String] = []
     
-    
     var body: some View {
         
-        LazyHStack {
-            ForEach(1...10, id: \.self) { count in
-                
+        ScrollView(.horizontal) {
+            LazyHStack {
+                ForEach(Array(subtitulos_seccion.enumerated()), id: \.element) { index, subtitulo in
+                    
+                    Text(subtitulo)
+                        .foregroundStyle(
+                            index == 0
+                            ? Color.pipboyVerde
+                            : Color.pipboyVerdeAcento
+                        )
+                }
             }
         }
-        
-        
     }
 }
 
 #Preview {
-    SectionSubtitles()
+    SectionSubtitles(subtitulos_seccion: ["STATUS","S.P.E.C.I.A.L","PERKS"])
+        .bold()
 }

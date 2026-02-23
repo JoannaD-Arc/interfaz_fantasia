@@ -10,23 +10,25 @@ import SwiftUI
 struct SectionTitle: View {
     
     var body: some View {
-        
-        HStack {
-            
-            ButtonTitle(nombre: "STAT")
-            ButtonTitle(nombre: "INV")
-            ButtonTitle(nombre: "DATA")
-            ButtonTitle(nombre: "MAP")
-            ButtonTitle(nombre: "RADIO")
+        VStack{
+            HStack {
+                
+                ButtonTitle(nombre: "STAT")
+                ButtonTitle(nombre: "INV")
+                ButtonTitle(nombre: "DATA")
+                ButtonTitle(nombre: "MAP")
+                ButtonTitle(nombre: "RADIO")
 
-        }
-        .padding(10)
-        
-        Divider()
-            .foregroundStyle(Color("pipboy_verde"))
-            .background(Color("pipboy_verde"))
-            .scaledToFit()
-            .padding(1)
+            }
+            .padding(5)
+            
+            Divider()
+                .foregroundStyle(Color("pipboy_verde"))
+                .background(Color("pipboy_verde"))
+                .scaledToFit()
+                .padding(0)
+        }.background(Color.black)
+
             
     }
     
