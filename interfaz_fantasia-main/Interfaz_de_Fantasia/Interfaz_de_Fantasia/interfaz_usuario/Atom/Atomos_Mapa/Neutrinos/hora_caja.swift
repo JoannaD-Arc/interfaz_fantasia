@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct time_box: View {
+struct hora_caja: View {
     var body: some View {
         ZStack(alignment: .leading){
             Rectangle()
@@ -28,5 +28,5 @@ struct time_box: View {
     }
 }
 #Preview {
-    time_box()
+    hora_caja()
 }

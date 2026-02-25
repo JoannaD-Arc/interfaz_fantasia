@@ -10,9 +10,9 @@ import SwiftUI
 struct seccion_informacion_inferior: View {
     var body: some View {
         HStack{
-            date_box()
-            time_box()
-            area_box()
+            fecha_caja()
+            hora_caja()
+            area_caja()
         }
             .background(Color.black)
             .frame(width: 400, height:25)

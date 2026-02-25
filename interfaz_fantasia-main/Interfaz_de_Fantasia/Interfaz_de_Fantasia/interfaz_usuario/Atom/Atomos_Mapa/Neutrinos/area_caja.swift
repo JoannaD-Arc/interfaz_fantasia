@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct area_box: View {
+struct area_caja: View {
     var body: some View {
         ZStack(alignment: .trailing){
             Rectangle()
@@ -24,5 +24,5 @@ struct area_box: View {
 }
 
 #Preview {
-    area_box()
+    area_caja()
 }

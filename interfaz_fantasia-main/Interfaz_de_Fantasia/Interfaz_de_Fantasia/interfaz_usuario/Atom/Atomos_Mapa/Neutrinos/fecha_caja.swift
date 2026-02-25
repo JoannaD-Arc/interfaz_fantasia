@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct date_box: View {
+struct fecha_caja: View {
 
     var body: some View {
         
@@ -25,5 +25,5 @@ struct date_box: View {
 }
 
 #Preview {
-    date_box()
+    fecha_caja()
 }
