@@ -66,7 +66,7 @@ struct estadistica_pantalla: View {
                     armadura_radiacion_caja()
                 }
 
-                stat_bottom_section()
+                estadistica_caja_inferior()
                     .frame(width: 150, height: 50)
                     .bold()
             }//VSTACK

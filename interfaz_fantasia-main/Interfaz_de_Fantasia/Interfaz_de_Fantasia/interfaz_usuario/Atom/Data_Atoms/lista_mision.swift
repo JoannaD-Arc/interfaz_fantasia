@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct quest_list: View {
+struct lista_mision: View {
     
-    var quest_list: [String] = []
+    var lista_de_lista_mision: [String] = []
     @State var selected_quest: String? = nil
     
     
@@ -17,7 +17,7 @@ struct quest_list: View {
         
         ScrollView(.vertical) {
             LazyVStack(alignment: .leading){
-                ForEach(quest_list, id: \.self) { quest in
+                ForEach(lista_de_lista_mision, id: \.self) { quest in
                     ZStack(alignment: .leading){
 
                         Rectangle()
@@ -55,5 +55,5 @@ struct quest_list: View {
 }
 
 #Preview {
-    quest_list(quest_list: ["Tarea iOS Interfaz de Fantasía", "Tarea iOS Interfaz de Fantasía"])
+    lista_mision(lista_de_lista_mision: ["Tarea iOS Interfaz de Fantasía", "Tarea iOS Interfaz de Fantasía"])
 }

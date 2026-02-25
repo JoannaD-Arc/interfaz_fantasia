@@ -6,41 +6,41 @@
 //
 import SwiftUI
 
-struct quest_step_list: View {
-    var step_list: [String] = []
-    @State var selected_step: String? = nil
+struct lista_paso_mision: View {
+    var paso_lista: [String] = []
+    @State var paso_seleccionado: String? = nil
     
     
     var body: some View {
         
         ScrollView(.vertical){
             LazyVStack(alignment: .leading){
-                ForEach(step_list, id: \.self){step in
+                ForEach(paso_lista, id: \.self){paso in
                     ZStack(alignment: .leading){
                         Rectangle()
                             .foregroundStyle(
-                                selected_step == step
+                                paso_seleccionado == paso
                                 ? Color.pipboyVerde
                                 : Color.pipboyVerdeAcento
                             )
                         HStack{
                             Image(systemName: "checkmark")
                                 .foregroundStyle(
-                                    selected_step == step
+                                    paso_seleccionado == paso
                                     ? Color.black
                                     : Color.pipboyVerdeAcento)
                                 .padding(5)
                                 .bold()
-                            Text(step)
+                            Text(paso)
                                 .foregroundStyle(
-                                    selected_step == step
+                                    paso_seleccionado == paso
                                     ? Color.pipboyVerdeAcento
                                     : Color.pipboyVerde
                                 )
                                 .bold()
                         }
                     }.onTapGesture {
-                        selected_step = step
+                        paso_seleccionado = paso
                     }
                     .frame(width: 300, height: 35)
                 }
@@ -51,5 +51,5 @@ struct quest_step_list: View {
 }
 
 #Preview {
-    quest_step_list(step_list: ["Quest 1", "Quest 2", "Quest 3"])
+    lista_paso_mision(paso_lista: ["Quest 1", "Quest 2", "Quest 3"])
 }

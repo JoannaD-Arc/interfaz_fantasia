@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct stat_bottom_section: View {
+public struct estadistica_caja_inferior: View {
     public var body: some View {
         HStack{
             hp_box(health_points: 67, max_health_points: 90)
@@ -18,5 +18,5 @@ public struct stat_bottom_section: View {
 }
 
 #Preview {
-    stat_bottom_section()
+    estadistica_caja_inferior()
 }

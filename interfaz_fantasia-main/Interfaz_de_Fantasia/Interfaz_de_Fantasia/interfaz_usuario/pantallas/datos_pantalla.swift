@@ -33,13 +33,13 @@ struct datos_pantalla: View {
                 Spacer()
                 HStack{
                     
-                   quest_list(quest_list: ["Tarea iOS interfaz de Fantasía","Desarrollar un juego de fantasía","Aprender a usar Git", "Nukear las islas salomón"])
+                   lista_mision(lista_de_lista_mision: ["Tarea iOS interfaz de Fantasía","Desarrollar un juego de fantasía","Aprender a usar Git", "Nukear las islas salomón"])
                     VStack{
                         Image("Hacker")
                             .resizable()
                             .scaledToFit()
     
-                        quest_step_list(step_list: ["Realizar 5 pantallas de Fantasía","Hacerte buey","Abrir el Gitjo"])
+                        lista_paso_mision(paso_lista: ["Realizar 5 pantallas de Fantasía","Hacerte buey","Abrir el Gitjo"])
                         
                     }
                 }
