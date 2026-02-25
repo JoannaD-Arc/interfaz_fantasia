@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct limb_gauge_box: View {
+struct extremidad_caja_salud: View {
     
-    var actual_limb_health: Int
-    var max_limb_health: Int
+    var vida_actual_extremidad: Int
+    var vida_maxima_extremidad: Int
 
-    var percentage: Double {
-        Double(actual_limb_health) / Double(max_limb_health)
+    var porcentaje_vida: Double {
+        Double(vida_actual_extremidad) / Double(vida_maxima_extremidad)
     }
     
     public var body: some View {
@@ -29,7 +29,7 @@ struct limb_gauge_box: View {
                            
                            Rectangle()
                                .fill(Color.pipboyVerde)
-                               .frame(width: 50 * percentage, height: 10)
+                               .frame(width: 50 * porcentaje_vida, height: 10)
                        }
                 
             }
@@ -44,5 +44,5 @@ struct limb_gauge_box: View {
 }
 
 #Preview {
-    limb_gauge_box(actual_limb_health: 50, max_limb_health: 100)
+    extremidad_caja_salud(vida_actual_extremidad: 50, vida_maxima_extremidad: 100)
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SectionSubtitles: View {
+struct SeccionSubtitulos: View {
     
     var subtitulos_seccion: [String] = []
     
@@ -30,6 +30,6 @@ struct SectionSubtitles: View {
 }
 
 #Preview {
-    SectionSubtitles(subtitulos_seccion: ["STATUS","S.P.E.C.I.A.L","PERKS"])
+    SeccionSubtitulos(subtitulos_seccion: ["STATUS","S.P.E.C.I.A.L","PERKS"])
         .bold()
 }

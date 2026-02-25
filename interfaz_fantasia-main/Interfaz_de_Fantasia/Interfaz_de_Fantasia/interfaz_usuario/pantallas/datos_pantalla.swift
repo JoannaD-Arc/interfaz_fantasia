@@ -13,8 +13,8 @@
 //
 import SwiftUI
 
-struct data_pantalla: View {
-    @State var pantalla_actual = PantallasDisponibles.PantallaInventario
+struct datos_pantalla: View {
+    @State var pantalla_actual = PantallasDisponibles.inventario
     
     var body: some View {
         ZStack{
@@ -22,10 +22,10 @@ struct data_pantalla: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
-                SectionTitle()
+                SeccionTitulos()
                 HStack{
                     Spacer(minLength: 290)
-                    data_section_subtitles(subtitulos_seccion: ["QUESTS","WORKSHOPS","STATS"])
+                    seccion_subtitulos_data(subtitulos_seccion: ["QUESTS","WORKSHOPS","STATS"])
                         .bold()
                         .padding(0)
                 }
@@ -44,13 +44,13 @@ struct data_pantalla: View {
                     }
                 }
                 Spacer()
-                bottom_map_section()
+                seccion_informacion_inferior()
             }
         }
     }
 }
 
 #Preview {
-  data_pantalla()
+  datos_pantalla()
         
 }

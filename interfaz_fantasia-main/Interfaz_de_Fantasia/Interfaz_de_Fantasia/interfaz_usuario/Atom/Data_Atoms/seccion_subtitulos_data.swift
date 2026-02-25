@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct data_section_subtitles: View {
+struct seccion_subtitulos_data: View {
     
     var subtitulos_seccion: [String] = []
     
@@ -31,5 +31,5 @@ struct data_section_subtitles: View {
 }
 
 #Preview {
-    data_section_subtitles(subtitulos_seccion: ["QUESTS","WORKSHOPS", "STATS"])
+    seccion_subtitulos_data(subtitulos_seccion: ["QUESTS","WORKSHOPS", "STATS"])
 }

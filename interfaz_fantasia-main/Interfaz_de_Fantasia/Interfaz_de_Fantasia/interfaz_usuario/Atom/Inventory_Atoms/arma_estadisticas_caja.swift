@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct weapon_stats: View {
+struct CajaEstadisticasArma: View {
     var leyenda: String
     var valor: String =  ""
     
@@ -16,19 +16,23 @@ struct weapon_stats: View {
             Rectangle()
                 
                 .foregroundStyle(Color.pipboyVerdeAcento)
-            
+                
             HStack{
                 Text(leyenda)
                     .foregroundStyle(Color.pipboyVerde)
+                    .bold()
+                    .padding(5)
                 Spacer()
                 Text(valor)
                     .foregroundStyle(Color.pipboyVerde)
+                    .bold()                 
+                    .padding(5)
             }
         }
-        .frame(width:500, height:25)
+        .frame(width:200, height:10)
     }
 }
 
 #Preview {
-    weapon_stats(leyenda: "hola mundo")
+    CajaEstadisticasArma(leyenda: "Damage")
 }

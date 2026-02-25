@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct bottom_map_section: View {
+struct seccion_informacion_inferior: View {
     var body: some View {
         HStack{
             date_box()
@@ -20,5 +20,5 @@ struct bottom_map_section: View {
 }
 
 #Preview {
-    bottom_map_section()
+    seccion_informacion_inferior()
 }

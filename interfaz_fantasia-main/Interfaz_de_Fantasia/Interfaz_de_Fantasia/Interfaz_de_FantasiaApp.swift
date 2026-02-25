@@ -11,7 +11,7 @@ import SwiftUI
 struct Interfaz_de_FantasiaApp: App {
     var body: some Scene {
         WindowGroup {
-          stat_pantalla()
+          estadistica_pantalla()
         }
     }
 }

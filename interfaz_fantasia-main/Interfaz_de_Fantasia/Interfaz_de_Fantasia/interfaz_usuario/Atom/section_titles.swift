@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SectionTitle: View {
+struct SeccionTitulos: View {
     
     var body: some View {
         VStack{
@@ -36,5 +36,5 @@ struct SectionTitle: View {
 }
 
 #Preview {
-    SectionTitle()
+    SeccionTitulos()
 }

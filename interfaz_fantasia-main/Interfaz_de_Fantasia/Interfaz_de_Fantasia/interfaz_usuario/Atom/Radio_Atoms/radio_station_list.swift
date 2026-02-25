@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RadioStationList: View {
+struct ListaEstacionDeRadio: View {
     
     var station_list: [String] = []
     @State var selected_station: String? = nil
@@ -55,5 +55,5 @@ struct RadioStationList: View {
 }
 
 #Preview {
-    RadioStationList(station_list: ["EXA FM", "RADIO 103.5", "RADIO 104.3", "RADIO 105.1"])
+    ListaEstacionDeRadio(station_list: ["EXA FM", "RADIO 103.5", "RADIO 104.3", "RADIO 105.1"])
 }

@@ -8,36 +8,39 @@ import SwiftUI
 
 enum PantallasDisponibles{
     
-    case PantallaStat
-    case PantallaInventario
-    case PantallaDatos
-    case PantallaMapa
-    case PantallaRadio
+    case estadisticas
+    case inventario
+    case datos
+    case mapa
+    case radio
     
 }
 
-struct stat_pantalla: View {
-    @State var pantalla_actual = PantallasDisponibles.PantallaStat
+struct estadistica_pantalla: View {
+    
+    @State var pantalla_actual = PantallasDisponibles.estadisticas
     
     var body: some View {
+        
         ZStack{
+            
             Color.black.edgesIgnoringSafeArea(.all)
             
             
             VStack{
-                SectionTitle()
+                SeccionTitulos()
                 
                 Spacer()
                 
-                SectionSubtitles(subtitulos_seccion: ["STATUS","S.P.E.C.I.A.L","PERKS"])
+                SeccionSubtitulos(subtitulos_seccion: ["STATUS", "S.P.E.C.I.A.L", "PERKS"])
                     .bold()
                 
-                limb_gauge_box(actual_limb_health: 25, max_limb_health: 100)
+                extremidad_caja_salud(vida_actual_extremidad: 25, vida_maxima_extremidad: 100)
                 HStack{
                     VStack{
-                        limb_gauge_box(actual_limb_health: 90, max_limb_health: 100)
+                        extremidad_caja_salud(vida_actual_extremidad: 90, vida_maxima_extremidad: 100)
                         Spacer()
-                        limb_gauge_box(actual_limb_health: 100, max_limb_health: 100)
+                        extremidad_caja_salud(vida_actual_extremidad: 100, vida_maxima_extremidad: 100)
                     }
                     
                     Image("VaultGirlGreen")
@@ -46,9 +49,9 @@ struct stat_pantalla: View {
                         .frame(width: 150 , height: 150)
                    
                     VStack{
-                        limb_gauge_box(actual_limb_health: 100, max_limb_health: 100)
+                        extremidad_caja_salud(vida_actual_extremidad: 100, vida_maxima_extremidad: 100)
                         Spacer()
-                        limb_gauge_box(actual_limb_health: 25, max_limb_health: 80)
+                        extremidad_caja_salud(vida_actual_extremidad: 25, vida_maxima_extremidad: 80)
                     }
                 }
 
@@ -59,8 +62,8 @@ struct stat_pantalla: View {
                     .bold()
                 
                 HStack{
-                    weapon_ammo_box()
-                    armor_rads_box()
+                    arma_municion_caja()
+                    armadura_radiacion_caja()
                 }
 
                 stat_bottom_section()
@@ -70,10 +73,12 @@ struct stat_pantalla: View {
             
         }//ZSTACK
 
+        
+        
     } //VIEW
 }
 
 #Preview {
-    stat_pantalla()
+    estadistica_pantalla()
         
 }

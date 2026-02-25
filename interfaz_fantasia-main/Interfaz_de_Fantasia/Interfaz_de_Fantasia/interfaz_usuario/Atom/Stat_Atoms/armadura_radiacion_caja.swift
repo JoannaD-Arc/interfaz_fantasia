@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct armor_rads_box: View {
+struct armadura_radiacion_caja: View {
     var body: some View {
         
         HStack{
@@ -56,5 +56,5 @@ struct armor_rads_box: View {
     }
 }
 #Preview {
-    armor_rads_box()
+    armadura_radiacion_caja()
 }

@@ -14,20 +14,27 @@ struct inventario_pantalla: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
-                SectionTitle()
-                SectionSubtitles(subtitulos_seccion: ["WEAPONS","APPAREL", "AID"])
+                SeccionTitulos()
+                SeccionSubtitulos(subtitulos_seccion: ["WEAPONS", "APPAREL", "AID"])
                 HStack{
                     VStack{
-                        RadioStationList(station_list: ["Fragmentation Grenade (2)","Fat Man","Glow-Sighted Heavy Pipe Pistol","Machete","Shotgun"])
+                        ListaEstacionDeRadio(station_list: ["Fragmentation Grenade (2)", "Fat Man", "Glow-Sighted Heavy Pipe Pistol", "Machete","Shotgun"])
                     }
-                    VStack{
-                        Image("FatMan")
-                            .resizable()
-                            .scaledToFit()
+                    VStack(alignment: .center){
+                        HStack{
+                            Image("FatMan")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                
+                        }
+
+                        EstadisticasArma()
+                            .padding(10)
                     }
                 }
                 Spacer()
-                bottom_map_section()
+                seccion_informacion_inferior()
             }
             
         }

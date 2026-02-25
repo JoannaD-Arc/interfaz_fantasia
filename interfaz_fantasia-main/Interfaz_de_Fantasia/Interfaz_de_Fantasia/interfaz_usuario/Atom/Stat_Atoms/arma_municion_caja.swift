@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct weapon_ammo_box: View {
+struct arma_municion_caja: View {
     var body: some View {
         
         HStack{
@@ -46,5 +46,5 @@ struct weapon_ammo_box: View {
     }
 }
 #Preview {
-    weapon_ammo_box()
+    arma_municion_caja()
 }

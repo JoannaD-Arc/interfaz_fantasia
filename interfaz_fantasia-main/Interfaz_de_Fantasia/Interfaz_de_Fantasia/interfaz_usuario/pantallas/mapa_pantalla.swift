@@ -18,11 +18,11 @@ struct mapa_pantalla: View {
             
             VStack{
                 
-                SectionTitle()
+                SeccionTitulos()
                 
                 Spacer()
                 
-                bottom_map_section()
+                seccion_informacion_inferior()
             }
         }
     }
